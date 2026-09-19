@@ -46,11 +46,8 @@
             text-overflow: ellipsis;
         }
         .item-meta { display: flex; justify-content: flex-end; align-items: center; gap: 16px; font-size: 0.95rem; }
-        .price { font-weight: bold; color: #4cd137; }
+        .price { font-weight: bold; }
         .buy-btn {
-            background: #8b1518;
-            color: #ffffff;
-            border: 1px solid #a82024;
             padding: 7px 14px;
             border-radius: 6px;
             text-decoration: none;
@@ -60,10 +57,31 @@
             align-items: center;
             transition: background 0.2s, border-color 0.2s;
         }
-        .buy-btn:hover {
-            background: #a82024;
-            border-color: #c4292e;
+
+        /* Amazon Styling */
+        .price.amazon-price { color: #f0c14b; }
+        .buy-btn.amazon-btn {
+            background: #232f3e;
+            color: #ffffff;
+            border: 1px solid #ff9900;
         }
+        .buy-btn.amazon-btn:hover {
+            background: #37475a;
+            border-color: #ffac33;
+        }
+
+        /* A24 Styling */
+        .price.a24-price { color: #d1d1d1; }
+        .buy-btn.a24-btn {
+            background: #333333;
+            color: #ffffff;
+            border: 1px solid #555555;
+        }
+        .buy-btn.a24-btn:hover {
+            background: #444444;
+            border-color: #777777;
+        }
+
         @media (max-width: 500px) {
             .wishlist-item { flex-direction: column; gap: 10px; }
             .item-meta { width: 100%; margin-top: 8px; justify-content: space-between; }
@@ -85,8 +103,8 @@
                 <div class="item-title">I'll Remind You of Everything: The Films of Mike Mills <span class="title-sub">(The Criterion Collection)</span></div>
                 <div class="item-desc">A gorgeous 6-disc collection from Criterion, my favorite physical media archive.</div>
                 <div class="item-meta">
-                    <span class="price">$68.99</span>
-                    <a href="https://www.amazon.com/dp/B0GXKVWNDC/" target="_blank" class="buy-btn">Buy on Amazon</a>
+                    <span class="price amazon-price">$68.99</span>
+                    <a href="https://www.amazon.com/dp/B0GXKVWNDC/" target="_blank" class="buy-btn amazon-btn">Buy on Amazon</a>
                 </div>
             </div>
         </div>
@@ -98,8 +116,8 @@
                 <div class="item-title">The Last Black Man in San Francisco <span class="title-sub">(A24 Collector's Edition)</span></div>
                 <div class="item-desc">A beautiful fabric-bound hardcover book edition sold exclusively by A24.</div>
                 <div class="item-meta">
-                    <span class="price">$45.00</span>
-                    <a href="https://shop.a24films.com/products/the-last-black-man-in-san-francisco-collectors-edition" target="_blank" class="buy-btn">Buy on A24</a>
+                    <span class="price a24-price">$45.00</span>
+                    <a href="https://shop.a24films.com/products/the-last-black-man-in-san-francisco-collectors-edition" target="_blank" class="buy-btn a24-btn">Buy on A24</a>
                 </div>
             </div>
         </div>
@@ -111,8 +129,8 @@
                 <div class="item-title">Stop Making Sense <span class="title-sub">(A24 Deluxe Collector's Edition)</span></div>
                 <div class="item-desc">A high-end, deluxe web-exclusive box set featuring a full hardcover book.</div>
                 <div class="item-meta">
-                    <span class="price">$53.00</span>
-                    <a href="https://shop.a24films.com/products/stop-making-sense-collectors-edition" target="_blank" class="buy-btn">Buy on A24</a>
+                    <span class="price a24-price">$53.00</span>
+                    <a href="https://shop.a24films.com/products/stop-making-sense-collectors-edition" target="_blank" class="buy-btn a24-btn">Buy on A24</a>
                 </div>
             </div>
         </div>
@@ -124,8 +142,8 @@
                 <div class="item-title">No Other Choice <span class="title-sub">(Limited Edition Ultra Deluxe)</span></div>
                 <div class="item-desc">A rare limited collector's mediabook featuring an art book and exclusive memorabilia.</div>
                 <div class="item-meta">
-                    <span class="price">$70.00</span>
-                    <a href="https://www.amazon.com/dp/B0GKCY8SL8/" target="_blank" class="buy-btn">Buy on Amazon</a>
+                    <span class="price amazon-price">$70.00</span>
+                    <a href="https://www.amazon.com/dp/B0GKCY8SL8/" target="_blank" class="buy-btn amazon-btn">Buy on Amazon</a>
                 </div>
             </div>
         </div>
@@ -137,8 +155,8 @@
                 <div class="item-title">Ocean's Trilogy <span class="title-sub">(3-Film Collection)</span></div>
                 <div class="item-desc">The complete trilogy box set featuring all three heist classics in top quality.</div>
                 <div class="item-meta">
-                    <span class="price">$39.99</span>
-                    <a href="https://www.amazon.com/dp/B0CXBPRR7B/" target="_blank" class="buy-btn">Buy on Amazon</a>
+                    <span class="price amazon-price">$39.99</span>
+                    <a href="https://www.amazon.com/dp/B0CXBPRR7B/" target="_blank" class="buy-btn amazon-btn">Buy on Amazon</a>
                 </div>
             </div>
         </div>
@@ -150,8 +168,8 @@
                 <div class="item-title">Kubo and the Two Strings <span class="title-sub">(Limited Edition Steelbook)</span></div>
                 <div class="item-desc">A stunning stop-motion animation masterpiece in a collectible metal steelbook case.</div>
                 <div class="item-meta">
-                    <span class="price">$24.49</span>
-                    <a href="https://www.amazon.com/dp/B0BN72RWHB/" target="_btn" class="buy-btn">Buy on Amazon</a>
+                    <span class="price amazon-price">$24.49</span>
+                    <a href="https://www.amazon.com/dp/B0BN72RWHB/" target="_blank" class="buy-btn amazon-btn">Buy on Amazon</a>
                 </div>
             </div>
         </div>
@@ -163,8 +181,8 @@
                 <div class="item-title">Coyote vs. Acme <span class="title-sub">(2026 New Release)</span></div>
                 <div class="item-desc">A brand-new physical release for a highly anticipated, legendary unreleased movie.</div>
                 <div class="item-meta">
-                    <span class="price">$27.95</span>
-                    <a href="https://www.amazon.com/dp/B0HJJMLJ5R/" target="_blank" class="buy-btn">Buy on Amazon</a>
+                    <span class="price amazon-price">$27.95</span>
+                    <a href="https://www.amazon.com/dp/B0HJJMLJ5R/" target="_blank" class="buy-btn amazon-btn">Buy on Amazon</a>
                 </div>
             </div>
         </div>
@@ -176,8 +194,8 @@
                 <div class="item-title">Kill Bill: The Whole Bloody Affair <span class="title-sub">(Collector's Edition)</span></div>
                 <div class="item-desc">The ultimate single-cut edition combining both films into one seamless epic.</div>
                 <div class="item-meta">
-                    <span class="price">$59.99</span>
-                    <a href="https://www.amazon.com/dp/B0GY9W9TH6/" target="_blank" class="buy-btn">Buy on Amazon</a>
+                    <span class="price amazon-price">$59.99</span>
+                    <a href="https://www.amazon.com/dp/B0GY9W9TH6/" target="_blank" class="buy-btn amazon-btn">Buy on Amazon</a>
                 </div>
             </div>
         </div>
@@ -189,8 +207,8 @@
                 <div class="item-title">Pulp Fiction <span class="title-sub">(Limited Edition Steelbook)</span></div>
                 <div class="item-desc">A classic film in a sleek, limited collector's metal steelbook case.</div>
                 <div class="item-meta">
-                    <span class="price">$29.99</span>
-                    <a href="https://www.amazon.com/dp/B0FQQ3B4G7/" target="_blank" class="buy-btn">Buy on Amazon</a>
+                    <span class="price amazon-price">$29.99</span>
+                    <a href="https://www.amazon.com/dp/B0FQQ3B4G7/" target="_blank" class="buy-btn amazon-btn">Buy on Amazon</a>
                 </div>
             </div>
         </div>
@@ -202,8 +220,8 @@
                 <div class="item-title">The End of Oak Street <span class="title-sub">(2026 New Release)</span></div>
                 <div class="item-desc">A brand-new mystery release starring Anne Hathaway that I'm eager to watch.</div>
                 <div class="item-meta">
-                    <span class="price">$27.95</span>
-                    <a href="https://www.amazon.com/dp/B0HC4MWJLF/" target="_blank" class="buy-btn">Buy on Amazon</a>
+                    <span class="price amazon-price">$27.95</span>
+                    <a href="https://www.amazon.com/dp/B0HC4MWJLF/" target="_blank" class="buy-btn amazon-btn">Buy on Amazon</a>
                 </div>
             </div>
         </div>
