@@ -14,8 +14,24 @@
             margin: 30px auto;
             padding: 20px;
         }
-        h1 { text-align: center; color: #ffffff; margin-bottom: 6px; }
-        p.subtitle { text-align: center; color: #888; font-size: 0.95rem; margin-bottom: 30px; }
+        h1 { text-align: center; color: #ffffff; margin-bottom: 12px; }
+        
+        /* Highlight banner for subtitle */
+        p.subtitle { 
+            text-align: center; 
+            color: #d0d0d0; 
+            font-size: 0.85rem; 
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            background: #1e1e1e;
+            border: 1px solid #333;
+            display: table;
+            margin: 0 auto 30px auto;
+            padding: 6px 16px;
+            border-radius: 20px;
+        }
+        
         .wishlist-container { display: flex; flex-direction: column; gap: 16px; }
         
         .wishlist-item {
@@ -121,7 +137,7 @@
 <body>
 
     <h1>Joe's Wish List</h1>
-    <p class="subtitle">Ranked in order of desirablity</p>
+    <p class="subtitle">Ranked in order of desirability</p>
 
     <div class="wishlist-container">
 
