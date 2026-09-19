@@ -34,7 +34,6 @@
         .title-sub {
             font-size: 0.88rem;
             font-weight: 400;
-            font-style: italic;
             color: #9e9e9e;
             margin-left: 4px;
         }
@@ -46,7 +45,7 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-        .item-meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.95rem; }
+        .item-meta { display: flex; justify-content: flex-end; align-items: center; gap: 16px; font-size: 0.95rem; }
         .price { font-weight: bold; color: #4cd137; }
         .buy-btn {
             background: #8b1518;
@@ -67,7 +66,7 @@
         }
         @media (max-width: 500px) {
             .wishlist-item { flex-direction: column; gap: 10px; }
-            .item-meta { width: 100%; margin-top: 8px; }
+            .item-meta { width: 100%; margin-top: 8px; justify-content: space-between; }
             .item-desc { white-space: normal; }
         }
     </style>
@@ -86,7 +85,7 @@
                 <div class="item-title">I'll Remind You of Everything: The Films of Mike Mills <span class="title-sub">(The Criterion Collection)</span></div>
                 <div class="item-desc">6-disc 4K box set featuring Beginners, 20th Century Women, and C'mon C'mon.</div>
                 <div class="item-meta">
-                    <span class="price">$68.99 (45% off sale)</span>
+                    <span class="price">$68.99</span>
                     <a href="https://www.amazon.com/dp/B0GXKVWNDC/" target="_blank" class="buy-btn">Buy on Amazon</a>
                 </div>
             </div>
