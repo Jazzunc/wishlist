@@ -29,38 +29,221 @@
         }
         .wishlist-item:hover { border-color: #555; transform: translateY(-2px); }
         .rank { font-size: 1.4rem; font-weight: bold; color: #888; min-width: 30px; text-align: center; line-height: 1; }
-        .item-details { flex-grow: 1; }
-        .item-title { font-size: 1.1rem; font-weight: bold; color: #fff; margin-bottom: 6px; }
-        .item-desc { font-size: 0.9rem; color: #aaa; margin-bottom: 12px; line-height: 1.4; }
+        .item-details { flex-grow: 1; min-width: 0; }
+        .item-title { font-size: 1.05rem; font-weight: bold; color: #fff; margin-bottom: 4px; }
+        .item-desc {
+            font-size: 0.88rem;
+            color: #aaa;
+            margin-bottom: 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
         .item-meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.95rem; }
         .price { font-weight: bold; color: #4cd137; }
         .buy-btn {
-            background: #e50914;
-            color: white;
-            padding: 8px 16px;
+            background: #2a2a2a;
+            color: #e0e0e0;
+            border: 1px solid #444;
+            padding: 7px 14px;
             border-radius: 6px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
             font-size: 0.85rem;
-            transition: background 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s, border-color 0.2s, color 0.2s;
         }
-        .buy-btn:hover { background: #b20710; }
+        .buy-btn:hover {
+            background: #383838;
+            border-color: #666;
+            color: #ffffff;
+        }
+        .btn-icon {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
         @media (max-width: 500px) {
             .wishlist-item { flex-direction: column; gap: 10px; }
             .item-meta { width: 100%; margin-top: 8px; }
+            .item-desc { white-space: normal; }
         }
     </style>
 </head>
 <body>
 
     <h1>Joe's Wish List</h1>
-    <p class="subtitle">Ranked in order of priority.</p>
+    <p class="subtitle">Ranked in order of desirablitiy.</p>
 
     <div class="wishlist-container">
 
         <!-- 1 -->
         <div class="wishlist-item">
             <div class="rank">1</div>
+            <div class="item-details">
+                <div class="item-title">I'll Remind You of Everything: The Films of Mike Mills (The Criterion Collection) [4K UHD]</div>
+                <div class="item-desc">6-disc 4K box set featuring Beginners, 20th Century Women, and C'mon C'mon.</div>
+                <div class="item-meta">
+                    <span class="price">$68.99 (45% off sale)</span>
+                    <a href="https://www.amazon.com/dp/B0GXKVWNDC/" target="_blank" class="buy-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24"><path d="M13.62 14.53c-1.84 1.36-4.5 2.08-6.8 2.08-3.23 0-6.13-1.2-8.31-3.21-.17-.16-.04-.38.16-.26 2.36 1.4 5.3 2.22 8.35 2.22 2.04 0 4.31-.53 6.32-1.63.3-.17.57.17.28.8zm.89-1.2c-.23-.3-.49-1.25-.49-1.25s.99.28 1.8.84c.88.6 1.34 1.37 1.25 1.57-.1.2-1.07.13-2.56-1.16zm8.88 5.76c-.22.18-1.57 1.29-4.22 1.29-3.69 0-6.81-2.12-8.48-5.22-.09-.17.06-.33.24-.22 1.94 1.18 4.29 1.88 6.78 1.88 2.47 0 4.67-.65 6.46-1.78.2-.12.38.1.22.25z"/></svg>
+                        Buy on Amazon
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="wishlist-item">
+            <div class="rank">2</div>
+            <div class="item-details">
+                <div class="item-title">The Last Black Man in San Francisco: Collector's Edition (A24 Exclusive)</div>
+                <div class="item-desc">Fabric-bound custom slipcase with window cutouts and companion book.</div>
+                <div class="item-meta">
+                    <span class="price">$45.00</span>
+                    <a href="https://shop.a24films.com/products/the-last-black-man-in-san-francisco-collectors-edition" target="_blank" class="buy-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24"><path d="M12 2L1 22h22L12 2zm0 4.5l7.5 13.5h-15L12 6.5z"/></svg>
+                        Buy on A24 Shop
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="wishlist-item">
+            <div class="rank">3</div>
+            <div class="item-details">
+                <div class="item-title">Stop Making Sense: Deluxe Collector's Edition (A24 Exclusive)</div>
+                <div class="item-desc">Deluxe blue textured box set with hardcover book and 4K restoration.</div>
+                <div class="item-meta">
+                    <span class="price">$53.00</span>
+                    <a href="https://shop.a24films.com/products/stop-making-sense-collectors-edition" target="_blank" class="buy-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24"><path d="M12 2L1 22h22L12 2zm0 4.5l7.5 13.5h-15L12 6.5z"/></svg>
+                        Buy on A24 Shop
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="wishlist-item">
+            <div class="rank">4</div>
+            <div class="item-details">
+                <div class="item-title">No Other Choice - Limited Edition Ultra Deluxe (4K UHD/Blu-ray)</div>
+                <div class="item-desc">Mediabook set featuring 32-page book, alternate cuts, and pin set.</div>
+                <div class="item-meta">
+                    <span class="price">$70.00</span>
+                    <a href="https://www.amazon.com/dp/B0GKCY8SL8/" target="_blank" class="buy-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24"><path d="M13.62 14.53c-1.84 1.36-4.5 2.08-6.8 2.08-3.23 0-6.13-1.2-8.31-3.21-.17-.16-.04-.38.16-.26 2.36 1.4 5.3 2.22 8.35 2.22 2.04 0 4.31-.53 6.32-1.63.3-.17.57.17.28.8zm.89-1.2c-.23-.3-.49-1.25-.49-1.25s.99.28 1.8.84c.88.6 1.34 1.37 1.25 1.57-.1.2-1.07.13-2.56-1.16zm8.88 5.76c-.22.18-1.57 1.29-4.22 1.29-3.69 0-6.81-2.12-8.48-5.22-.09-.17.06-.33.24-.22 1.94 1.18 4.29 1.88 6.78 1.88 2.47 0 4.67-.65 6.46-1.78.2-.12.38.1.22.25z"/></svg>
+                        Buy on Amazon
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="wishlist-item">
+            <div class="rank">5</div>
+            <div class="item-details">
+                <div class="item-title">Ocean's Trilogy (4K UHD)</div>
+                <div class="item-desc">Soderbergh's crime caper trilogy in native 4K with HDR formatting.</div>
+                <div class="item-meta">
+                    <span class="price">$39.99</span>
+                    <a href="https://www.amazon.com/dp/B0CXBPRR7B/" target="_blank" class="buy-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24"><path d="M13.62 14.53c-1.84 1.36-4.5 2.08-6.8 2.08-3.23 0-6.13-1.2-8.31-3.21-.17-.16-.04-.38.16-.26 2.36 1.4 5.3 2.22 8.35 2.22 2.04 0 4.31-.53 6.32-1.63.3-.17.57.17.28.8zm.89-1.2c-.23-.3-.49-1.25-.49-1.25s.99.28 1.8.84c.88.6 1.34 1.37 1.25 1.57-.1.2-1.07.13-2.56-1.16zm8.88 5.76c-.22.18-1.57 1.29-4.22 1.29-3.69 0-6.81-2.12-8.48-5.22-.09-.17.06-.33.24-.22 1.94 1.18 4.29 1.88 6.78 1.88 2.47 0 4.67-.65 6.46-1.78.2-.12.38.1.22.25z"/></svg>
+                        Buy on Amazon
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="wishlist-item">
+            <div class="rank">6</div>
+            <div class="item-details">
+                <div class="item-title">Kubo and the Two Strings - Limited Edition Steelbook (4K UHD + Blu-ray)</div>
+                <div class="item-desc">Laika's stop-motion masterwork in metallic steelbook with Dolby Vision.</div>
+                <div class="item-meta">
+                    <span class="price">$24.49</span>
+                    <a href="https://www.amazon.com/dp/B0BN72RWHB/" target="_blank" class="buy-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24"><path d="M13.62 14.53c-1.84 1.36-4.5 2.08-6.8 2.08-3.23 0-6.13-1.2-8.31-3.21-.17-.16-.04-.38.16-.26 2.36 1.4 5.3 2.22 8.35 2.22 2.04 0 4.31-.53 6.32-1.63.3-.17.57.17.28.8zm.89-1.2c-.23-.3-.49-1.25-.49-1.25s.99.28 1.8.84c.88.6 1.34 1.37 1.25 1.57-.1.2-1.07.13-2.56-1.16zm8.88 5.76c-.22.18-1.57 1.29-4.22 1.29-3.69 0-6.81-2.12-8.48-5.22-.09-.17.06-.33.24-.22 1.94 1.18 4.29 1.88 6.78 1.88 2.47 0 4.67-.65 6.46-1.78.2-.12.38.1.22.25z"/></svg>
+                        Buy on Amazon
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="wishlist-item">
+            <div class="rank">7</div>
+            <div class="item-details">
+                <div class="item-title">Coyote vs. Acme (4K Ultra HD)</div>
+                <div class="item-desc">The completed-then-shelved Looney Tunes hybrid feature on physical media.</div>
+                <div class="item-meta">
+                    <span class="price">$27.95</span>
+                    <a href="https://www.amazon.com/dp/B0HJJMLJ5R/" target="_blank" class="buy-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24"><path d="M13.62 14.53c-1.84 1.36-4.5 2.08-6.8 2.08-3.23 0-6.13-1.2-8.31-3.21-.17-.16-.04-.38.16-.26 2.36 1.4 5.3 2.22 8.35 2.22 2.04 0 4.31-.53 6.32-1.63.3-.17.57.17.28.8zm.89-1.2c-.23-.3-.49-1.25-.49-1.25s.99.28 1.8.84c.88.6 1.34 1.37 1.25 1.57-.1.2-1.07.13-2.56-1.16zm8.88 5.76c-.22.18-1.57 1.29-4.22 1.29-3.69 0-6.81-2.12-8.48-5.22-.09-.17.06-.33.24-.22 1.94 1.18 4.29 1.88 6.78 1.88 2.47 0 4.67-.65 6.46-1.78.2-.12.38.1.22.25z"/></svg>
+                        Buy on Amazon
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="wishlist-item">
+            <div class="rank">8</div>
+            <div class="item-details">
+                <div class="item-title">Kill Bill: The Whole Bloody Affair - Collector's Edition (4K UHD)</div>
+                <div class="item-desc">Volumes 1 & 2 combined into Tarantino's complete continuous epic.</div>
+                <div class="item-meta">
+                    <span class="price">$59.99</span>
+                    <a href="https://www.amazon.com/dp/B0GY9W9TH6/" target="_blank" class="buy-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24"><path d="M13.62 14.53c-1.84 1.36-4.5 2.08-6.8 2.08-3.23 0-6.13-1.2-8.31-3.21-.17-.16-.04-.38.16-.26 2.36 1.4 5.3 2.22 8.35 2.22 2.04 0 4.31-.53 6.32-1.63.3-.17.57.17.28.8zm.89-1.2c-.23-.3-.49-1.25-.49-1.25s.99.28 1.8.84c.88.6 1.34 1.37 1.25 1.57-.1.2-1.07.13-2.56-1.16zm8.88 5.76c-.22.18-1.57 1.29-4.22 1.29-3.69 0-6.81-2.12-8.48-5.22-.09-.17.06-.33.24-.22 1.94 1.18 4.29 1.88 6.78 1.88 2.47 0 4.67-.65 6.46-1.78.2-.12.38.1.22.25z"/></svg>
+                        Buy on Amazon
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="wishlist-item">
+            <div class="rank">9</div>
+            <div class="item-details">
+                <div class="item-title">Pulp Fiction (Limited Edition Steelbook) [4K UHD + Blu-ray]</div>
+                <div class="item-desc">Metallic steelbook edition with key art and 4K remaster.</div>
+                <div class="item-meta">
+                    <span class="price">$29.99</span>
+                    <a href="https://www.amazon.com/dp/B0FQQ3B4G7/" target="_blank" class="buy-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24"><path d="M13.62 14.53c-1.84 1.36-4.5 2.08-6.8 2.08-3.23 0-6.13-1.2-8.31-3.21-.17-.16-.04-.38.16-.26 2.36 1.4 5.3 2.22 8.35 2.22 2.04 0 4.31-.53 6.32-1.63.3-.17.57.17.28.8zm.89-1.2c-.23-.3-.49-1.25-.49-1.25s.99.28 1.8.84c.88.6 1.34 1.37 1.25 1.57-.1.2-1.07.13-2.56-1.16zm8.88 5.76c-.22.18-1.57 1.29-4.22 1.29-3.69 0-6.81-2.12-8.48-5.22-.09-.17.06-.33.24-.22 1.94 1.18 4.29 1.88 6.78 1.88 2.47 0 4.67-.65 6.46-1.78.2-.12.38.1.22.25z"/></svg>
+                        Buy on Amazon
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="wishlist-item">
+            <div class="rank">10</div>
+            <div class="item-details">
+                <div class="item-title">The End of Oak Street (4K UHD + Digital)</div>
+                <div class="item-desc">David Robert Mitchell's suburban mystery starring Anne Hathaway.</div>
+                <div class="item-meta">
+                    <span class="price">$27.95</span>
+                    <a href="https://www.amazon.com/dp/B0HC4MWJLF/" target="_blank" class="buy-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24"><path d="M13.62 14.53c-1.84 1.36-4.5 2.08-6.8 2.08-3.23 0-6.13-1.2-8.31-3.21-.17-.16-.04-.38.16-.26 2.36 1.4 5.3 2.22 8.35 2.22 2.04 0 4.31-.53 6.32-1.63.3-.17.57.17.28.8zm.89-1.2c-.23-.3-.49-1.25-.49-1.25s.99.28 1.8.84c.88.6 1.34 1.37 1.25 1.57-.1.2-1.07.13-2.56-1.16zm8.88 5.76c-.22.18-1.57 1.29-4.22 1.29-3.69 0-6.81-2.12-8.48-5.22-.09-.17.06-.33.24-.22 1.94 1.18 4.29 1.88 6.78 1.88 2.47 0 4.67-.65 6.46-1.78.2-.12.38.1.22.25z"/></svg>
+                        Buy on Amazon
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>            <div class="rank">1</div>
             <div class="item-details">
                 <div class="item-title">I'll Remind You of Everything: The Films of Mike Mills (The Criterion Collection) [4K UHD]</div>
                 <div class="item-desc">6-disc 4K UHD/Blu-ray box set featuring Beginners, 20th Century Women, and C'mon C'mon with brand-new 4K restorations, Dolby Vision, custom artwork, extensive shorts, and a hardcover book.</div>
