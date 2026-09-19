@@ -30,21 +30,33 @@
         .wishlist-item:hover { border-color: #555; transform: translateY(-2px); }
         .rank { font-size: 1.4rem; font-weight: bold; color: #888; min-width: 30px; text-align: center; line-height: 1; }
         .item-details { flex-grow: 1; min-width: 0; }
-        .item-title { font-size: 1.05rem; font-weight: bold; color: #fff; margin-bottom: 4px; }
-        .title-sub {
-            font-size: 0.88rem;
-            font-weight: 400;
-            color: #9e9e9e;
-            margin-left: 4px;
+        
+        /* Line 1: Title */
+        .item-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 2px;
         }
-        .item-desc {
+        
+        /* Line 2: Edition / Format */
+        .item-edition {
             font-size: 0.88rem;
-            color: #aaa;
+            font-weight: 500;
+            color: #4da6ff; /* Clean light blue for secondary line */
+            margin-bottom: 6px;
+        }
+        
+        /* Line 3: Description */
+        .item-desc {
+            font-size: 0.85rem;
+            color: #9e9e9e; /* Muted gray for description line */
             margin-bottom: 12px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
+        
         .item-meta { display: flex; justify-content: flex-end; align-items: center; gap: 16px; font-size: 0.95rem; }
         .price { font-weight: bold; }
         .buy-btn {
@@ -100,7 +112,8 @@
         <div class="wishlist-item">
             <div class="rank">1</div>
             <div class="item-details">
-                <div class="item-title">I'll Remind You of Everything: The Films of Mike Mills <span class="title-sub">(The Criterion Collection)</span></div>
+                <div class="item-title">I'll Remind You of Everything: The Films of Mike Mills</div>
+                <div class="item-edition">The Criterion Collection</div>
                 <div class="item-desc">A 6-disc collection with 3 movies and tons of special features.</div>
                 <div class="item-meta">
                     <span class="price amazon-price">$68.99</span>
@@ -113,7 +126,8 @@
         <div class="wishlist-item">
             <div class="rank">2</div>
             <div class="item-details">
-                <div class="item-title">The Last Black Man in San Francisco <span class="title-sub">(A24 Collector's Edition)</span></div>
+                <div class="item-title">The Last Black Man in San Francisco</div>
+                <div class="item-edition">A24 Collector's Edition</div>
                 <div class="item-desc">A fabric-bound hardcover book edition with lots of extra goodies.</div>
                 <div class="item-meta">
                     <span class="price a24-price">$45.00</span>
@@ -126,7 +140,8 @@
         <div class="wishlist-item">
             <div class="rank">3</div>
             <div class="item-details">
-                <div class="item-title">Stop Making Sense <span class="title-sub">(A24 Deluxe Collector's Edition)</span></div>
+                <div class="item-title">Stop Making Sense</div>
+                <div class="item-edition">A24 Deluxe Collector's Edition</div>
                 <div class="item-desc">Another fabric-bound hardcover book edition with lots of extra goodies.</div>
                 <div class="item-meta">
                     <span class="price a24-price">$53.00</span>
@@ -139,7 +154,8 @@
         <div class="wishlist-item">
             <div class="rank">4</div>
             <div class="item-details">
-                <div class="item-title">No Other Choice <span class="title-sub">(Limited Edition Ultra Deluxe)</span></div>
+                <div class="item-title">No Other Choice</div>
+                <div class="item-edition">Limited Edition Ultra Deluxe</div>
                 <div class="item-desc">A rare limited collector's mediabook featuring an art book and exclusive memorabilia.</div>
                 <div class="item-meta">
                     <span class="price amazon-price">$70.00</span>
@@ -152,7 +168,8 @@
         <div class="wishlist-item">
             <div class="rank">5</div>
             <div class="item-details">
-                <div class="item-title">Ocean's Trilogy <span class="title-sub">(3-Film Collection)</span></div>
+                <div class="item-title">Ocean's Trilogy</div>
+                <div class="item-edition">3-Film Collection</div>
                 <div class="item-desc">A box set with all three Ocean's films and extra features.</div>
                 <div class="item-meta">
                     <span class="price amazon-price">$39.99</span>
@@ -165,7 +182,8 @@
         <div class="wishlist-item">
             <div class="rank">6</div>
             <div class="item-details">
-                <div class="item-title">Kubo and the Two Strings <span class="title-sub">(Limited Edition Steelbook)</span></div>
+                <div class="item-title">Kubo and the Two Strings</div>
+                <div class="item-edition">Limited Edition Steelbook</div>
                 <div class="item-desc">The collectible metal steelbook edition.</div>
                 <div class="item-meta">
                     <span class="price amazon-price">$24.49</span>
@@ -178,7 +196,8 @@
         <div class="wishlist-item">
             <div class="rank">7</div>
             <div class="item-details">
-                <div class="item-title">Coyote vs. Acme <span class="title-sub">(2026 New Release)</span></div>
+                <div class="item-title">Coyote vs. Acme</div>
+                <div class="item-edition">2026 New Release</div>
                 <div class="item-desc">A brand new physical release.</div>
                 <div class="item-meta">
                     <span class="price amazon-price">$27.95</span>
@@ -191,7 +210,8 @@
         <div class="wishlist-item">
             <div class="rank">8</div>
             <div class="item-details">
-                <div class="item-title">Kill Bill: The Whole Bloody Affair <span class="title-sub">(Collector's Edition)</span></div>
+                <div class="item-title">Kill Bill: The Whole Bloody Affair</div>
+                <div class="item-edition">Collector's Edition</div>
                 <div class="item-desc">The new single cut edition combining two films into one with added missing scenes.</div>
                 <div class="item-meta">
                     <span class="price amazon-price">$59.99</span>
@@ -204,7 +224,8 @@
         <div class="wishlist-item">
             <div class="rank">9</div>
             <div class="item-details">
-                <div class="item-title">Pulp Fiction <span class="title-sub">(Limited Edition Steelbook)</span></div>
+                <div class="item-title">Pulp Fiction</div>
+                <div class="item-edition">Limited Edition Steelbook</div>
                 <div class="item-desc">A limited collector's metal steelbook case.</div>
                 <div class="item-meta">
                     <span class="price amazon-price">$29.99</span>
@@ -217,7 +238,8 @@
         <div class="wishlist-item">
             <div class="rank">10</div>
             <div class="item-details">
-                <div class="item-title">The End of Oak Street <span class="title-sub">(2026 New Release)</span></div>
+                <div class="item-title">The End of Oak Street</div>
+                <div class="item-edition">2026 New Release</div>
                 <div class="item-desc">A brand new physical release.</div>
                 <div class="item-meta">
                     <span class="price amazon-price">$27.95</span>
