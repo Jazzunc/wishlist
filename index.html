@@ -1,231 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joe's Wish List</title>
-    <style>
-        * { box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 20px;
-        }
-        h1 { text-align: center; color: #ffffff; margin-bottom: 6px; }
-        p.subtitle { text-align: center; color: #888; font-size: 0.95rem; margin-bottom: 30px; }
-        .wishlist-container { display: flex; flex-direction: column; gap: 16px; }
-        
-        .wishlist-item {
-            background: #1e1e1e;
-            border: 1px solid #333;
-            border-radius: 10px;
-            padding: 20px;
-            display: flex;
-            gap: 16px;
-            align-items: flex-start;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-        .wishlist-item:hover { border-color: #555; transform: translateY(-2px); }
-        .rank { font-size: 1.4rem; font-weight: bold; color: #888; min-width: 28px; text-align: center; line-height: 1.2; }
-        .item-details { flex-grow: 1; min-width: 0; }
-        
-        /* Line 1: Title */
-        .item-title {
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 2px;
-        }
-        
-        /* Line 2: Edition / Format (Vibrant Violet Accent) */
-        .item-edition {
-            font-size: 0.88rem;
-            font-weight: 500;
-            color: #b388ff;
-            margin-bottom: 6px;
-        }
-        
-        /* Line 3: Description */
-        .item-desc {
-            font-size: 0.85rem;
-            color: #9e9e9e;
-            margin-bottom: 14px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        
-        .item-meta {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 16px;
-            font-size: 0.95rem;
-            width: 100%;
-        }
-        .price { font-weight: bold; }
-        .buy-btn {
-            padding: 7px 14px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
-            display: inline-flex;
-            align-items: center;
-            transition: background 0.2s, border-color 0.2s;
-        }
-
-        /* Amazon Styling */
-        .price.amazon-price { color: #d99b00; }
-        .buy-btn.amazon-btn {
-            background: #232f3e;
-            color: #ffffff;
-            border: 1px solid #d98200;
-        }
-        .buy-btn.amazon-btn:hover {
-            background: #37475a;
-            border-color: #f09513;
-        }
-
-        /* A24 Styling */
-        .price.a24-price { color: #00a8e8; }
-        .buy-btn.a24-btn {
-            background: #18222d;
-            color: #ffffff;
-            border: 1px solid #00a8e8;
-        }
-        .buy-btn.a24-btn:hover {
-            background: #1e2d3d;
-            border-color: #33bceb;
-        }
-
-        @media (max-width: 500px) {
-            .wishlist-item {
-                padding: 16px;
-                gap: 12px;
-            }
-            .item-desc {
-                white-space: normal;
-                margin-bottom: 12px;
-            }
-            .item-meta {
-                justify-content: flex-end;
-                margin-top: 4px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <h1>Joe's Wish List</h1>
-    <p class="subtitle">Ranked in order of desirablity</p>
-
-    <div class="wishlist-container">
-
-        <!-- 1 -->
-        <div class="wishlist-item">
-            <div class="rank">1</div>
-            <div class="item-details">
-                <div class="item-title">I'll Remind You of Everything: The Films of Mike Mills</div>
-                <div class="item-edition">The Criterion Collection</div>
-                <div class="item-desc">A 6 disc collection with 3 movies and tons of special features</div>
-                <div class="item-meta">
-                    <span class="price amazon-price">$68.99</span>
-                    <a href="https://www.amazon.com/dp/B0GXKVWNDC/" target="_blank" class="buy-btn amazon-btn">Buy on Amazon</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 2 -->
-        <div class="wishlist-item">
-            <div class="rank">2</div>
-            <div class="item-details">
-                <div class="item-title">The Last Black Man in San Francisco</div>
-                <div class="item-edition">A24 Collector's Edition</div>
-                <div class="item-desc">A fabric bound hardcover book edition with lots of extra goodies</div>
-                <div class="item-meta">
-                    <span class="price a24-price">$45.00</span>
-                    <a href="https://shop.a24films.com/products/the-last-black-man-in-san-francisco-collectors-edition" target="_blank" class="buy-btn a24-btn">Buy on A24</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 3 -->
-        <div class="wishlist-item">
-            <div class="rank">3</div>
-            <div class="item-details">
-                <div class="item-title">Stop Making Sense</div>
-                <div class="item-edition">A24 Deluxe Collector's Edition</div>
-                <div class="item-desc">Another fabric bound hardcover book edition with lots of extra goodies</div>
-                <div class="item-meta">
-                    <span class="price a24-price">$53.00</span>
-                    <a href="https://shop.a24films.com/products/stop-making-sense-collectors-edition" target="_blank" class="buy-btn a24-btn">Buy on A24</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 4 -->
-        <div class="wishlist-item">
-            <div class="rank">4</div>
-            <div class="item-details">
-                <div class="item-title">No Other Choice</div>
-                <div class="item-edition">Limited Edition Ultra Deluxe</div>
-                <div class="item-desc">A rare limited collector's mediabook featuring an art book and exclusive memorabilia</div>
-                <div class="item-meta">
-                    <span class="price amazon-price">$70.00</span>
-                    <a href="https://www.amazon.com/dp/B0GKCY8SL8/" target="_blank" class="buy-btn amazon-btn">Buy on Amazon</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 5 -->
-        <div class="wishlist-item">
-            <div class="rank">5</div>
-            <div class="item-details">
-                <div class="item-title">Ocean's Trilogy</div>
-                <div class="item-edition">3 Film Collection</div>
-                <div class="item-desc">A box set with all three Ocean's films and extra features</div>
-                <div class="item-meta">
-                    <span class="price amazon-price">$39.99</span>
-                    <a href="https://www.amazon.com/dp/B0CXBPRR7B/" target="_blank" class="buy-btn amazon-btn">Buy on Amazon</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 6 -->
-        <div class="wishlist-item">
-            <div class="rank">6</div>
-            <div class="item-details">
-                <div class="item-title">Kubo and the Two Strings</div>
-                <div class="item-edition">Limited Edition Steelbook</div>
-                <div class="item-desc">The collectible metal steelbook edition</div>
-                <div class="item-meta">
-                    <span class="price amazon-price">$24.49</span>
-                    <a href="https://www.amazon.com/dp/B0BN72RWHB/" target="_blank" class="buy-btn amazon-btn">Buy on Amazon</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 7 -->
+<!-- 7 -->
         <div class="wishlist-item">
             <div class="rank">7</div>
-            <div class="item-details">
-                <div class="item-title">Coyote vs. Acme</div>
-                <div class="item-edition">2026 New Release</div>
-                <div class="item-desc">A brand new physical release</div>
-                <div class="item-meta">
-                    <span class="price amazon-price">$27.95</span>
-                    <a href="https://www.amazon.com/dp/B0HJJMLJ5R/" target="_blank" class="buy-btn amazon-btn">Buy on Amazon</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 8 -->
-        <div class="wishlist-item">
-            <div class="rank">8</div>
             <div class="item-details">
                 <div class="item-title">Kill Bill: The Whole Bloody Affair</div>
                 <div class="item-edition">Collector's Edition</div>
@@ -237,9 +12,9 @@
             </div>
         </div>
 
-        <!-- 9 -->
+        <!-- 8 -->
         <div class="wishlist-item">
-            <div class="rank">9</div>
+            <div class="rank">8</div>
             <div class="item-details">
                 <div class="item-title">Pulp Fiction</div>
                 <div class="item-edition">Limited Edition Steelbook</div>
@@ -247,6 +22,20 @@
                 <div class="item-meta">
                     <span class="price amazon-price">$29.99</span>
                     <a href="https://www.amazon.com/dp/B0FQQ3B4G7/" target="_blank" class="buy-btn amazon-btn">Buy on Amazon</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="wishlist-item">
+            <div class="rank">9</div>
+            <div class="item-details">
+                <div class="item-title">Coyote vs. Acme</div>
+                <div class="item-edition">2026 New Release</div>
+                <div class="item-desc">A brand new physical release</div>
+                <div class="item-meta">
+                    <span class="price amazon-price">$27.95</span>
+                    <a href="https://www.amazon.com/dp/B0HJJMLJ5R/" target="_blank" class="buy-btn amazon-btn">Buy on Amazon</a>
                 </div>
             </div>
         </div>
@@ -264,8 +53,3 @@
                 </div>
             </div>
         </div>
-
-    </div>
-
-</body>
-</html>
