@@ -1,9 +1,66 @@
-<div class="wishlist-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe's Wish List</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        h1 { text-align: center; color: #ffffff; margin-bottom: 6px; }
+        p.subtitle { text-align: center; color: #888; font-size: 0.95rem; margin-bottom: 30px; }
+        .wishlist-container { display: flex; flex-direction: column; gap: 16px; }
+        .wishlist-item {
+            background: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .wishlist-item:hover { border-color: #555; transform: translateY(-2px); }
+        .rank { font-size: 1.4rem; font-weight: bold; color: #888; min-width: 30px; text-align: center; line-height: 1; }
+        .item-details { flex-grow: 1; }
+        .item-title { font-size: 1.1rem; font-weight: bold; color: #fff; margin-bottom: 6px; }
+        .item-desc { font-size: 0.9rem; color: #aaa; margin-bottom: 12px; line-height: 1.4; }
+        .item-meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.95rem; }
+        .price { font-weight: bold; color: #4cd137; }
+        .buy-btn {
+            background: #e50914;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+        .buy-btn:hover { background: #b20710; }
+        @media (max-width: 500px) {
+            .wishlist-item { flex-direction: column; gap: 10px; }
+            .item-meta { width: 100%; margin-top: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Joe's Wish List</h1>
+    <p class="subtitle">Ranked in order of priority.</p>
+
+    <div class="wishlist-container">
 
         <!-- 1 -->
         <div class="wishlist-item">
             <div class="rank">1</div>
-            <img class="item-img" src="https://upload.wikimedia.org/wikipedia/en/2/22/Beginners_poster.jpg" alt="Mike Mills Collection">
             <div class="item-details">
                 <div class="item-title">I'll Remind You of Everything: The Films of Mike Mills (The Criterion Collection) [4K UHD]</div>
                 <div class="item-desc">6-disc 4K UHD/Blu-ray box set featuring Beginners, 20th Century Women, and C'mon C'mon with brand-new 4K restorations, Dolby Vision, custom artwork, extensive shorts, and a hardcover book.</div>
@@ -17,7 +74,6 @@
         <!-- 2 -->
         <div class="wishlist-item">
             <div class="rank">2</div>
-            <img class="item-img" src="https://upload.wikimedia.org/wikipedia/en/6/68/The_Last_Black_Man_in_San_Francisco.png" alt="The Last Black Man in San Francisco">
             <div class="item-details">
                 <div class="item-title">The Last Black Man in San Francisco: Collector's Edition (A24 Exclusive)</div>
                 <div class="item-desc">A stunning fabric-bound custom slipcase featuring distinctive window cutouts, an exclusive companion book, and gorgeous physical design directly from the A24 shop.</div>
@@ -31,7 +87,6 @@
         <!-- 3 -->
         <div class="wishlist-item">
             <div class="rank">3</div>
-            <img class="item-img" src="https://upload.wikimedia.org/wikipedia/en/b/b3/Stop_Making_Sense_poster.jpg" alt="Stop Making Sense">
             <div class="item-details">
                 <div class="item-title">Stop Making Sense: Deluxe Collector's Edition (A24 Exclusive)</div>
                 <div class="item-desc">Jonathan Demme's legendary concert film in a deluxe blue textured package with a comprehensive hardcover book, deep archival supplements, and the pristine 4K restoration.</div>
@@ -45,7 +100,6 @@
         <!-- 4 -->
         <div class="wishlist-item">
             <div class="rank">4</div>
-            <img class="item-img" src="https://upload.wikimedia.org/wikipedia/en/d/d4/Decision_to_Leave_poster.jpg" alt="No Other Choice">
             <div class="item-details">
                 <div class="item-title">No Other Choice - Limited Edition Ultra Deluxe (4K UHD/Blu-ray)</div>
                 <div class="item-desc">Park Chan-wook's newest film packaged in an opulent NEON store-exclusive Mediabook set with a 32-page hardcover book, theatrical and expanded cuts, and exclusive pin set.</div>
@@ -59,7 +113,6 @@
         <!-- 5 -->
         <div class="wishlist-item">
             <div class="rank">5</div>
-            <img class="item-img" src="https://upload.wikimedia.org/wikipedia/en/6/68/Ocean%27s_Eleven_Poster.jpg" alt="Ocean's Eleven">
             <div class="item-details">
                 <div class="item-title">Ocean's Trilogy (4K UHD)</div>
                 <div class="item-desc">Steven Soderbergh's masterclass in cool crime capers (Ocean's Eleven, Twelve, Thirteen) in native 4K with upgraded HDR formatting.</div>
@@ -73,7 +126,6 @@
         <!-- 6 -->
         <div class="wishlist-item">
             <div class="rank">6</div>
-            <img class="item-img" src="https://upload.wikimedia.org/wikipedia/en/c/c4/Kubo_and_the_Two_Strings_poster.png" alt="Kubo and the Two Strings">
             <div class="item-details">
                 <div class="item-title">Kubo and the Two Strings - Limited Edition Steelbook (4K UHD + Blu-ray)</div>
                 <div class="item-desc">Laika’s stop-motion visual masterwork outfitted with a metallic steelbook design, Dolby Vision HDR, and immersive audio packaging.</div>
@@ -87,7 +139,6 @@
         <!-- 7 -->
         <div class="wishlist-item">
             <div class="rank">7</div>
-            <img class="item-img" src="https://upload.wikimedia.org/wikipedia/en/1/11/Looney_Tunes_Icon.png" alt="Coyote vs. Acme">
             <div class="item-details">
                 <div class="item-title">Coyote vs. Acme (4K Ultra HD)</div>
                 <div class="item-desc">The completed-then-shelved Looney Tunes hybrid feature making its physical media debut.</div>
@@ -101,7 +152,6 @@
         <!-- 8 -->
         <div class="wishlist-item">
             <div class="rank">8</div>
-            <img class="item-img" src="https://upload.wikimedia.org/wikipedia/en/0/0b/Kill_Bill_Volume_1.png" alt="Kill Bill">
             <div class="item-details">
                 <div class="item-title">Kill Bill: The Whole Bloody Affair - Collector's Edition (4K UHD)</div>
                 <div class="item-desc">Combining Volumes 1 and 2 into Tarantino’s intended continuous epic feature, complete with a 40-page booklet and poster replicas.</div>
@@ -115,7 +165,6 @@
         <!-- 9 -->
         <div class="wishlist-item">
             <div class="rank">9</div>
-            <img class="item-img" src="https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg" alt="Pulp Fiction">
             <div class="item-details">
                 <div class="item-title">Pulp Fiction (Limited Edition Steelbook) [4K UHD + Blu-ray]</div>
                 <div class="item-desc">Paramount’s striking metallic steelbook edition featuring custom key art and a pristine 4K remaster.</div>
@@ -129,7 +178,6 @@
         <!-- 10 -->
         <div class="wishlist-item">
             <div class="rank">10</div>
-            <img class="item-img" src="https://upload.wikimedia.org/wikipedia/en/b/b5/It_Follows_poster.jpg" alt="The End of Oak Street">
             <div class="item-details">
                 <div class="item-title">The End of Oak Street (4K UHD + Digital)</div>
                 <div class="item-desc">David Robert Mitchell's eerie suburban mystery starring Anne Hathaway, capturing day-one pre-order 4K specs.</div>
@@ -141,3 +189,6 @@
         </div>
 
     </div>
+
+</body>
+</html>
