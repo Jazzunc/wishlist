@@ -17,18 +17,19 @@
         h1 { text-align: center; color: #ffffff; margin-bottom: 6px; }
         p.subtitle { text-align: center; color: #888; font-size: 0.95rem; margin-bottom: 30px; }
         .wishlist-container { display: flex; flex-direction: column; gap: 16px; }
+        
         .wishlist-item {
             background: #1e1e1e;
             border: 1px solid #333;
             border-radius: 10px;
             padding: 20px;
             display: flex;
-            gap: 20px;
+            gap: 16px;
             align-items: flex-start;
             transition: transform 0.2s, border-color 0.2s;
         }
         .wishlist-item:hover { border-color: #555; transform: translateY(-2px); }
-        .rank { font-size: 1.4rem; font-weight: bold; color: #888; min-width: 30px; text-align: center; line-height: 1; }
+        .rank { font-size: 1.4rem; font-weight: bold; color: #888; min-width: 28px; text-align: center; line-height: 1.2; }
         .item-details { flex-grow: 1; min-width: 0; }
         
         /* Line 1: Title */
@@ -51,13 +52,20 @@
         .item-desc {
             font-size: 0.85rem;
             color: #9e9e9e;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
         
-        .item-meta { display: flex; justify-content: flex-end; align-items: center; gap: 16px; font-size: 0.95rem; }
+        .item-meta {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.95rem;
+            width: 100%;
+        }
         .price { font-weight: bold; }
         .buy-btn {
             padding: 7px 14px;
@@ -95,9 +103,18 @@
         }
 
         @media (max-width: 500px) {
-            .wishlist-item { flex-direction: column; gap: 10px; }
-            .item-meta { width: 100%; margin-top: 8px; justify-content: flex-end; gap: 16px; }
-            .item-desc { white-space: normal; }
+            .wishlist-item {
+                padding: 16px;
+                gap: 12px;
+            }
+            .item-desc {
+                white-space: normal;
+                margin-bottom: 12px;
+            }
+            .item-meta {
+                justify-content: flex-end;
+                margin-top: 4px;
+            }
         }
     </style>
 </head>
